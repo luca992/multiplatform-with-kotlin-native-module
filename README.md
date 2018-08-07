@@ -1,1 +1,3 @@
-# multiplatform-with-kotlin-native-module
+# Hello World
+
+A basic "Hello, World" in Kotlin/Native and Gradle.
