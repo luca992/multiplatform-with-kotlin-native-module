@@ -15,7 +15,11 @@ apply plugin: 'konan'
 konan.targets = ['macbook']
 
 konanArtifacts {
-     program('hello')
+     program('hello') {
+             libraries {
+                 allLibrariesFrom project(':domain:native')
+             }
+     }
 }
 
 repositories {
@@ -23,9 +27,9 @@ repositories {
 }
 
 dependencies {
-    implementation project(':domain:native')
-}
 
+//    implementation project(path: ':domain:native')
+}
 
 
 

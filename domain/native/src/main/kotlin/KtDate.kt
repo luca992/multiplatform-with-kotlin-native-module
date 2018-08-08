@@ -1,4 +1,4 @@
-package co.talkshop.domain
+package com.example
 
 
 
@@ -22,7 +22,7 @@ actual class Date {
     actual fun getMinutes() = calendar.toInt()
     actual fun getTime(): Number = calendar
 
-    override fun equals(other: Any?): Boolean = other is Date && other.calendar.time == calendar.time
+    override fun equals(other: Any?): Boolean = other is Date && other.getTime() == getTime()
 }
 
 actual operator fun Date.compareTo(otherDate: Date): Int = date.compareTo(otherDate.date)

@@ -1,4 +1,4 @@
-package co.talkshop.domain
+package com.example
 expect class Date() {
     fun getDate(): Int
     fun getMonth(): Int

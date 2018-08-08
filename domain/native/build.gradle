@@ -1,21 +1,13 @@
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
-        maven { url 'https://dl.bintray.com/jetbrains/kotlin-native-dependencies' }
-    }
+apply plugin: 'konan'
 
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.9-dev-2922"
-    }
 
+
+konanArtifacts {
+    library('native') {
+        enableMultiplatform true
+    }
 }
 
-apply plugin: 'kotlin-platform-native'
-
-repositories {
-    jcenter()
-}
 
 dependencies {
         expectedBy project(':domain:common')
