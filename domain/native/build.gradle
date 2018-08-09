@@ -1,15 +1,7 @@
-apply plugin: 'konan'
+apply plugin: 'kotlin-platform-native'
 
-
-
-konanArtifacts {
-    library('native') {
-        enableMultiplatform true
-    }
-}
 
 
 dependencies {
-        expectedBy project(':domain:common')
+    expectedBy project(':domain:common')
 }
-

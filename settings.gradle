@@ -1,4 +1,4 @@
-rootProject.name = 'untitled1'
+rootProject.name = 'helloNativeMultiplatform'
 
 enableFeaturePreview('GRADLE_METADATA')
 

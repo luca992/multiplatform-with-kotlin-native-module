@@ -10,26 +10,24 @@ buildscript {
     }
 }
 
-apply plugin: 'konan'
+apply plugin: 'kotlin-platform-native'
 
-konan.targets = ['macbook']
 
-konanArtifacts {
-     program('hello') {
-             libraries {
-                 allLibrariesFrom project(':domain:native')
-             }
-     }
-}
-
-repositories {
-    jcenter()
-}
 
 dependencies {
+        implementation project(path: ':domain:native')
+}
 
-//    implementation project(path: ':domain:native')
+sourceSets {
+    main {
+        component {
+            //target "macos_x64", "linux_x64", "mingw_x64"
+            outputKinds = [EXECUTABLE]
+        }
+    }
 }
 
 
-
+task runDebug(type: Exec, dependsOn: "build") {
+    commandLine 'build/exe/main/debug/helloNativeMultiplatform.kexe'
+}
