@@ -1,8 +1,12 @@
 apply plugin: 'kotlin-platform-common'
 
 
+repositories {
+    jcenter()
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-dev/' }
+}
 
 dependencies {
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:" + project.ext.kotlin_version
 }
 
