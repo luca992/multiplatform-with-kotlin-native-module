@@ -10,8 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/domain/common" />
-            <option value="$PROJECT_DIR$/domain/native" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

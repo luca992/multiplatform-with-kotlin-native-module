@@ -1,7 +1,0 @@
-apply plugin: 'kotlin-platform-native'
-
-
-
-dependencies {
-    expectedBy project(':domain:common')
-}

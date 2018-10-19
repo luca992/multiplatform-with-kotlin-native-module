@@ -1,0 +1,27 @@
+apply plugin: 'kotlin-multiplatform'
+
+kotlin {
+    targets {
+
+        fromPreset(presets.macosX64, 'mac')
+        fromPreset(presets.jvm, 'jvm')
+    }
+    sourceSets {
+        commonMain {
+            dependencies {
+    		    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+            }
+        }
+        nativeCommonMain {
+	    }
+
+        configure([/*linuxMain, windowsMain,*/ macMain]) {
+            dependsOn nativeCommonMain
+        }
+
+    }
+}
+
+
+
+

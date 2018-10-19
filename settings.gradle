@@ -2,8 +2,7 @@ rootProject.name = 'helloNativeMultiplatform'
 
 enableFeaturePreview('GRADLE_METADATA')
 
-include ':domain:common'
-include ':domain:native'
+include ':domain'
 
 
 
